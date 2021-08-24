@@ -1,25 +1,51 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import NavBar from './componets/Navbar';
+import Header from './componets/Header';
+import VillainHome from './componets/VillainHome';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+  return (<>
+
+    <Header/>
+    {/* <BrowserRouter> */}
+    {/* <Switch> */}
+      <NavBar/>
+    {/* </Switch> */}
+    {/* </BrowserRouter> */}
+    
+    <VillainHome/>
+    
+    
+    
+    
+    
+    
+    
+    
+    {/* <h1> - NavBar - Should see this all the time </h1> */}
+    {/* <BrowserRouter> */}
+
+      {/* <Route exact path="/" component={New} /> */}
+
+      {/* <Route exact path="/NavBar" component={NavBar} /> */}
+
+    {/* </BrowserRouter>  */}
+
+
+
+
+  </>);
 }
 
 export default App;
+
+
+//                   <app/>
+//         <NavBar/>             <Header/>
+//<Home/><Jail/><Wanted/><CommentsForm/>
+//<VillainsCard/>
+//
