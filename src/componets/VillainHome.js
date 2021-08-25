@@ -8,6 +8,7 @@ import  ReactDOM from 'react-dom';
 function VillainHome() {
   const [villain, setVillain] = useState([]);
   const [villainsInJail, setVillainsInJail] = useState([]);
+
   
   useEffect(() => {
     fetch("http://localhost:3000/villains")
@@ -58,7 +59,7 @@ function VillainHome() {
         />
       {/* </Route> */}
       {/* <Route path="/comments"> */}
-        <CommentsForm/>
+        <CommentsForm villainsToComments={villain}/>
       {/* </Route> */}
           {/* </Switch> */}
       
