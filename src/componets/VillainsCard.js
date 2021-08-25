@@ -26,11 +26,13 @@ const clickHandler=()=>{
         //     <p>Race: {villainToRender.appearance.race}</p>
         // </div>
         <div className="collection">
+             <button onClick={clickHandler}>Go to Jail</button>
         <div className="flipCard">
+           
             <div className="flipCardInner">
                 <div className="flipCardFront">
                     <h2>{villainToRender.name}</h2>
-                    <img src={villainToRender.image} className="image"/>
+                    <img src={villainToRender.image} className="image" />
                 </div>
                 <div className="flipCardBack">
                     <p>Intelligence:{villainToRender.powerstats.intelligence}</p>
