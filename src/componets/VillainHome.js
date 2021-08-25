@@ -9,7 +9,7 @@ function VillainHome() {
   const [villain, setVillain] = useState([]);
   const [villainsInJail, setVillainsInJail] = useState([]);
 
-  const [commentsPost, setPost] = useState([]);
+//   const [commentsPost, setPost] = useState([]);
 
   
   useEffect(() => {
@@ -44,14 +44,16 @@ function VillainHome() {
         setVillainsInJail([...filterVillain])
   }
 
-  useEffect(() => {
-  fetch("http://localhost:3000/comments", {method: 'Post', headers:{'Content-Type': 'application/json'}, body: JSON.stringify()})
-    .then(response => response.json())
-    .then(commentsFetched => {console.log("Post-Fetch: ", commentsFetched)
-        setPost(commentsFetched.id)
-    })
+// const commentsToVillain=()=>{
 
-  }, []);
+
+//   fetch("http://localhost:3000/comments", {method: 'Post', headers:{'Content-Type': 'application/json'}, body: JSON.stringify()})
+//     .then(response => response.json())
+//     .then(commentsFetched => {console.log("Post-Fetch: ", commentsFetched)
+//         setPost(commentsFetched.id)
+//     })
+
+// }
 
     return(
         <div>
@@ -70,7 +72,8 @@ function VillainHome() {
       {/* </Route> */}
       {/* <Route path="/comments"> */}
 
-        <CommentsForm />
+        <CommentsForm villainsToComments={villain}
+        />
 
       {/* </Route> */}
           {/* </Switch> */}
