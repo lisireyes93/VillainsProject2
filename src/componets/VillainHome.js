@@ -8,6 +8,7 @@ import  ReactDOM from 'react-dom';
 function VillainHome() {
   const [villain, setVillain] = useState([]);
   const [villainsInJail, setVillainsInJail] = useState([]);
+  const [commentsPost, setPost] = useState([]);
   
   useEffect(() => {
     fetch("http://localhost:3000/villains")
@@ -40,8 +41,16 @@ function VillainHome() {
         console.log(filterVillain)
         setVillainsInJail([...filterVillain])
   }
-    
-  
+
+  useEffect(() => {
+  fetch("http://localhost:3000/comments", {method: 'Post', headers:{'Content-Type': 'application/json'}, body: JSON.stringify()})
+    .then(response => response.json())
+    .then(commentsFetched => {console.log("Post-Fetch: ", commentsFetched)
+        setPost(commentsFetched.id)
+    })
+
+  }, []);
+
     return(
         <div>
         <h1>Home</h1>
@@ -58,7 +67,7 @@ function VillainHome() {
         />
       {/* </Route> */}
       {/* <Route path="/comments"> */}
-        <CommentsForm/>
+        <CommentsForm commentsToMap={commentsPost}/>
       {/* </Route> */}
           {/* </Switch> */}
       
