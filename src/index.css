@@ -30,3 +30,78 @@ code {
   width: auto;
 }
 
+
+.collection {
+  margin: 2rem;
+}
+
+
+.flipCard {
+  /* background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; Remove this if you don't want the 3D effect */
+
+  background-color: transparent;
+  width: 15rem;
+  height: 25rem;
+  padding: 3rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px rgb(4, 14, 71);
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+  background-image: url(https://www.seekpng.com/png/small/768-7682654_grunge-background-texture-grunge-border.png);
+  background-size: 100% 100%;
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+
+  /* text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52 */
+}
+
+/* Style the back side */
+.flipCardBack {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+
+  font-size: 18px;
+  font-family: "Comic Sans MS";
+}
+
