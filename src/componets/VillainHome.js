@@ -67,7 +67,7 @@ function VillainHome() {
         />
       {/* </Route> */}
       {/* <Route path="/comments"> */}
-        <CommentsForm commentsToMap={commentsPost}/>
+        <CommentsForm />
       {/* </Route> */}
           {/* </Switch> */}
       
