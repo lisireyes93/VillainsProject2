@@ -12,6 +12,31 @@ code {
     monospace;
 } */
 
+.home {
+  margin: center;
+  width: 100%;
+  
+}
+
+.homeImg {
+  height: auto;
+  width: 900px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 3px 4px rgb(49, 52, 68);
+}
+
+.para {
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: #ffffff;
+}
+.welcome {
+  text-align: center;
+}
 
 .card {
   text-align: center;
@@ -22,6 +47,20 @@ code {
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #e04b52
+}
+
+button {
+  background-color: cadetblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin:  6px  ;
+}
+
+button:hover {
+  background-color: #503d64;
 }
 
 .image {
@@ -44,34 +83,41 @@ code {
 }
 
 .headerTitle {
+  text-align: left;
   position: relative;
   top: 14px;
   left: 10px;
   font-size: 25px;
-  /* font-family: "Monaco"; */
   font-family: "Trebuchet MS";
-  /* font-family: "Chalkduster"; */
-  /* font-family: "Courier"; */
-  /* font-family: "Courier New"; */
-  
-  
 }
-.header {
+
+/* .header {
   background-color: azure;
   width: 100%;
   height: 100px;
   border-radius: 8px;
-  /* position: fixed;
+  position: fixed;
   right: 0;
   left: 0;
-  z-index: 999; */
-}
+  z-index: 999;
+} */
+
+.headerNav {
+  background-color: azure;
+  width: 98%;
+  height: 100px;
+  border-radius: 8px;  
+  margin-right: 10px;
+} 
 
 .navlinks {
-  background-color: azure;
+ position: relative;
+ left: 10px;
   border-radius: 8px;
   width: 100%;
   height: 50px;
+  padding-left: -500px;
+  color: #ffffff;
 }
 
 .route {
@@ -79,11 +125,20 @@ code {
   font-family: "Trebuchet MS";
 }
 
+.headerNav {
+  position: relative;
+  top: 14px;
+  left: 13px;
+}
+
 h2 {
   font-family: "Trebuchet MS";
- 
-    
 }
+
+h1 {
+  text-align: center;
+}
+
 .villainName {
   font-family: "Trebuchet MS";
   text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
