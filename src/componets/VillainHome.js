@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import NavBar from './Navbar';
+import Home from "./Home";
+
 
 function VillainHome() {
   const [villain, setVillain] = useState([]);
@@ -74,7 +76,9 @@ function VillainHome() {
 
             <CommentsForm villainsToComments={villain}
             />
-
+          </Route>
+          <Route path="/">
+            <Home/>
           </Route>
         </Switch>
 
