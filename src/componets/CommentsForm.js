@@ -64,13 +64,17 @@ function CommentsForm({ villainsToComments }) {
     
     const commentsName= comments.map(eachComment => {
         console.log(eachComment.name)
-        return(<>
-            <h2>{eachComment.name}</h2>
-            <p>{eachComment.comments}</p>
-        </>)
+        return (
+            <div id="commentsMade">
+                <h2 >{eachComment.name}</h2>
+                <p>{eachComment.comments}</p>
+            </div >
+        )
     })
 
     return (
+        <>
+        <h1>Comments</h1>
         <div className="formContainer">
             <form onSubmit={submitForm}>
                 <label for="villainComments">Choose Villain</label>
@@ -82,7 +86,8 @@ function CommentsForm({ villainsToComments }) {
                 <input type="submit" value="Submit"></input>
             </form>
             {commentsName}
-        </div>
+            </div>
+            </>
     )
 }
 

@@ -3,7 +3,8 @@ import Wanted from './Wanted';
 import CommentsForm from './CommentsForm';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import  ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
+import NavBar from './Navbar';
 
 function VillainHome() {
   const [villain, setVillain] = useState([]);
@@ -56,29 +57,30 @@ function VillainHome() {
 // }
 
     return(
-        <div>
-        <h1>Home</h1>
-    {/* <BrowserRouter> */}
-    {/* <Switch> */}
-      {/* <Route path="/jail"> */}
+        <div className="route">
+        {/* <h1>Home</h1> */}
+        <BrowserRouter>
+          <NavBar />
+    <Switch>
+      <Route path="/jail">
         <Jail villainJailToMap={villainsInJail}
                 alertVillain={VillainClickedRemove}
         />
-      {/* </Route> */}
-      {/* <Route path="/wanted"> */}
+      </Route>
+      <Route path="/wanted">
         <Wanted villainsToMap={villain}
                 alertVillain={VillainsWasClicked}
         />
-      {/* </Route> */}
-      {/* <Route path="/comments"> */}
+      </Route>
+      <Route path="/comments">
 
         <CommentsForm villainsToComments={villain}
         />
 
-      {/* </Route> */}
-          {/* </Switch> */}
+      </Route>
+          </Switch>
       
-          {/* </BrowserRouter> */}
+          </BrowserRouter>
         </div>
     )
 }

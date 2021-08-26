@@ -30,30 +30,91 @@ code {
   width: auto;
 }
 
-
 .collection {
   margin: 2rem;
+  display: inline;
+  
 }
 
+.headerImg {
+  float: left;
+  width: 100px;
+  height: auto;
+
+}
+
+.headerTitle {
+  position: relative;
+  top: 14px;
+  left: 10px;
+  font-size: 25px;
+  /* font-family: "Monaco"; */
+  font-family: "Trebuchet MS";
+  /* font-family: "Chalkduster"; */
+  /* font-family: "Courier"; */
+  /* font-family: "Courier New"; */
+  
+  
+}
+.header {
+  background-color: azure;
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.route {
+  padding-top: 30px;
+  font-family: "Trebuchet MS";
+}
+
+h2 {
+  font-family: "Trebuchet MS";
+ 
+    
+}
+.villainName {
+  font-family: "Trebuchet MS";
+  text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+}
+
+body {
+  background-color: cadetblue;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 4000px;
+    background: linear-gradient(100deg, cadetblue 0%, #544197 51%, #307acf 85%);
+}
+
+.jailButton {
+  background-color: #2c2038;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.jailButton:hover {
+  background-color: #503d64;
+}
 
 .flipCard {
-  /* background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; Remove this if you don't want the 3D effect */
-
   background-color: transparent;
   width: 15rem;
   height: 25rem;
   padding: 3rem;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px rgb(4, 14, 71);
+  box-shadow: 3px 4px rgb(49, 52, 68);
   border: 1px solid #f1f1f1;
   perspective: 1000px; 
   background-image: url(https://www.seekpng.com/png/small/768-7682654_grunge-background-texture-grunge-border.png);
   background-size: 100% 100%;
+  border-radius: 8px;
+  
 }
 
 /* This container is needed to position the front and back side */
@@ -64,6 +125,7 @@ code {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -84,6 +146,7 @@ code {
 .flipCardFront {
   background-color: rgba(0, 0, 0, 0);
   color: black;
+  
 
   /* text-align: center;
   border: grey solid 1px;
@@ -97,12 +160,12 @@ code {
 
 /* Style the back side */
 .flipCardBack {
+  font-family: "Trebuchet MS";
   background-color: rgba(0, 0, 0, 0);
   color: rgb(0, 0, 0);
   transform: rotateY(180deg);
 
   font-size: 18px;
-  font-family: "Comic Sans MS";
 }
 
 
@@ -111,33 +174,51 @@ code {
 
 input[type=text], select, textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 10px; /* Some padding */ 
   border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
+  border-radius: 8px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  margin-bottom: 12px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: "Trebuchet MS";
 }
+
+/* #comments {
+  font-family: "Trebuchet MS";
+} */
+
 
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
+  background-color: #2c2038;
+  color: rgb(255, 255, 255);
+  padding: 10px 18px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #503d64;
 }
 
 /* Add a background color and some padding around the form */
 .formContainer {
-  border-radius: 5px;
-  background-color: #f2f2f2;
+  border-radius: 8px;
+  background-color: #635a6da1;
   padding: 20px;
+  
 }
+
+#commentsMade {
+  background-color: #635a6da1;
+  border-radius: 8px;
+  padding: 1px;
+  margin: 1rem;
+  text-align: center;
+}
+
+
+

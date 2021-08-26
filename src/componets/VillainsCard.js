@@ -30,7 +30,7 @@ const clickHandler=()=>{
 
             <div className="flipCardInner">
                 <div className="flipCardFront">
-                    <h2>{villainToRender.name}</h2>
+                    <h2 className="villainName">{villainToRender.name}</h2>
                     <img src={villainToRender.image} className="image" />
                     <p>Height: {villainToRender.appearance.height}</p>
                     <p>Weight: {villainToRender.appearance.weight}</p>
@@ -39,7 +39,7 @@ const clickHandler=()=>{
                 </div>
                 
                 <div className="flipCardBack">                        
-                    <button onClick={clickHandler}>Go to Jail</button>
+                    <button className="jailButton" onClick={clickHandler}>Go to Jail</button>
 
                     <p>Intelligence:{villainToRender.powerstats.intelligence}</p>
                     <p>Strength:{villainToRender.powerstats.strength}</p>
