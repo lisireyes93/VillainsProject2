@@ -10,13 +10,13 @@ function NavBar() {
                 to="/jail"
                 exact
             >
-                Jail
+                 Jail.
             </NavLink>
             <NavLink
                 to="/wanted"
                 exact
             >
-                Wanted
+                Wanted.
             </NavLink>
             <NavLink
                 to="/comments"

@@ -481,6 +481,11 @@
       "name": "Bane",
       "comments": "Bane hurt me!!! HELP!!!",
       "id": 1
+    },
+    {
+      "name": "Riddler",
+      "comments": "I couldn't figure out his riddle! I'm stuck in a cage now! :(",
+      "id": 2
     }
   ]
 }
