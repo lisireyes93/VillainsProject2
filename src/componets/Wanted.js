@@ -10,7 +10,7 @@ function Wanted(props) {
     props.alertVillain(clickedVillains)
 
     }
-    
+     const canGoToJail = true
       
     return(<div>
         
@@ -21,7 +21,9 @@ function Wanted(props) {
                 
                 return(
 
-                    <VillainsCard key={eachVillain.id}
+                    <VillainsCard
+                                 canGoToJail={canGoToJail}
+                                key={eachVillain.id}
                                 villainToRender={eachVillain}
                                 powerstats={eachVillain.powerstats}
                                 appearance={eachVillain.appearance}
