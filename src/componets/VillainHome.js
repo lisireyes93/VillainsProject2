@@ -10,79 +10,77 @@ function VillainHome() {
   const [villain, setVillain] = useState([]);
   const [villainsInJail, setVillainsInJail] = useState([]);
 
-//   const [commentsPost, setPost] = useState([]);
 
-  
   useEffect(() => {
     fetch("http://localhost:3000/villains")
       .then(response => response.json())
-      .then(fetchedVillains => { console.log("Fetched: ", fetchedVillains)
+      .then(fetchedVillains => {
+        // console.log("Fetched: ", fetchedVillains)
 
-    setVillain(fetchedVillains)
+        setVillain(fetchedVillains)
       })
 
   }, [])
 
   const VillainsWasClicked = (clickedVillains) => {
-    console.log(clickedVillains)
-    let villainFound = villainsInJail.find(eachVillainInJail => 
-        eachVillainInJail.id === clickedVillains.id
-        )
-        if(!villainFound){
-            setVillainsInJail([...villainsInJail, clickedVillains])
-        }
-        else{
-            console.log("Hey! its add", clickedVillains.name)
-        }
-  }
 
-  const VillainClickedRemove=(clickedVillains)=>{
-
-    let filterVillain = villainsInJail.filter(eachVillainInJail=>
-        eachVillainInJail.id !== clickedVillains.id
-        )
-        console.log(filterVillain)
-        setVillainsInJail([...filterVillain])
-  }
-
-// const commentsToVillain=()=>{
-
-
-//   fetch("http://localhost:3000/comments", {method: 'Post', headers:{'Content-Type': 'application/json'}, body: JSON.stringify()})
-//     .then(response => response.json())
-//     .then(commentsFetched => {console.log("Post-Fetch: ", commentsFetched)
-//         setPost(commentsFetched.id)
-//     })
-
-// }
-
-    return(
-        <div className="route">
-        {/* <h1>Home</h1> */}
-        <BrowserRouter>
-          <NavBar />
-    <Switch>
-      <Route path="/jail">
-        <Jail villainJailToMap={villainsInJail}
-                alertVillain={VillainClickedRemove}
-        />
-      </Route>
-      <Route path="/wanted">
-        <Wanted villainsToMap={villain}
-                alertVillain={VillainsWasClicked}
-        />
-      </Route>
-      <Route path="/comments">
-
-        <CommentsForm villainsToComments={villain}
-        />
-
-      </Route>
-          </Switch>
-      
-          </BrowserRouter>
-        </div>
+    const villainGoingToJail = villain.indexOf(clickedVillains);
+    console.log("CLICKING!!!!!!", villainGoingToJail)
+    // console.log(clickedVillains)
+    let villainFound = villainsInJail.find(eachVillainInJail =>
+      eachVillainInJail.id === clickedVillains.id
     )
+    if (!villainFound) {
+      setVillainsInJail([...villainsInJail, clickedVillains])
+      setVillain([...villain.slice(0, villainGoingToJail), ...villain.slice(villainGoingToJail + 1)])
+    }
+    else {
+      // console.log("Hey! its add", clickedVillains.name)
+    }
+  }
+
+  const VillainClickedRemove = (clickedVillains) => {
+    let filterVillain = villainsInJail.filter(eachVillainInJail =>
+      eachVillainInJail.id !== clickedVillains.id
+    )
+    console.log(filterVillain)
+    setVillainsInJail([...filterVillain])
+    setVillain([clickedVillains, ...villain])
+
+  }
+
+  // const RemoveFromWanted = () => {
+  //   let fitlerWanted = villainsInJail.filter()
+  // }
+
+
+  return (
+    <div className="route">
+      {/* <h1>Home</h1> */}
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route path="/jail">
+            <Jail villainJailToMap={villainsInJail}
+              alertVillain={VillainClickedRemove}
+            />
+          </Route>
+          <Route path="/wanted">
+            <Wanted villainsToMap={villain}
+              alertVillain={VillainsWasClicked}
+            />
+          </Route>
+          <Route path="/comments">
+
+            <CommentsForm villainsToComments={villain}
+            />
+
+          </Route>
+        </Switch>
+
+      </BrowserRouter>
+    </div>
+  )
 }
 
 // ReactDom.render(

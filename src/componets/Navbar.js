@@ -5,12 +5,12 @@ import { NavLink } from 'react-router-dom';
 function NavBar() {
 
     return (
-        <div>
+        <div className="navlinks">
             <NavLink
                 to="/jail"
                 exact
             >
-                 Jail.
+                Jail.
             </NavLink>
             <NavLink
                 to="/wanted"
@@ -24,7 +24,7 @@ function NavBar() {
             >
                 Comments
             </NavLink>
-                
+
 
 
         </div>

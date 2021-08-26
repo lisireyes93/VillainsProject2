@@ -486,6 +486,11 @@
       "name": "Riddler",
       "comments": "I couldn't figure out his riddle! I'm stuck in a cage now! :(",
       "id": 2
+    },
+    {
+      "name": "Loki",
+      "comments": "Yesss!!! Loki is in jail!!!",
+      "id": 3
     }
   ]
 }
