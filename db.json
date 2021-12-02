@@ -496,6 +496,21 @@
       "name": "Doctor Doom",
       "comments": "He's no Doctor! He's a monster!!!! HELPPPPPPPPPPPPPPPP!!!",
       "id": 4
+    },
+    {
+      "name": "Doomsday",
+      "comments": "He yeeted my car across the city! I just got my villains insurance removed :'(",
+      "id": 5
+    },
+    {
+      "name": "Poison Ivy",
+      "comments": "She turned my cactus on me! Now my cactus tries to poke me! ",
+      "id": 6
+    },
+    {
+      "name": "Joker",
+      "comments": "Be careful!! Harley Quinn helped joker escape!!!",
+      "id": 7
     }
   ]
 }

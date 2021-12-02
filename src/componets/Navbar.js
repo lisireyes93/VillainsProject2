@@ -14,6 +14,7 @@ function NavBar() {
                 <NavLink
                 to="/"
                 exact
+                
             >
                 Home
             </NavLink>

@@ -5,6 +5,7 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 
 const lock = <FontAwesomeIcon icon={faUserLock} />
 const wanted = <FontAwesomeIcon icon={faUserSecret} />
+
 function VillainsCard({ villainToRender, handleVillainsSides, canGoToJail }) {
     // console.log(villainToRender)
 
